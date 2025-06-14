@@ -1,1 +1,2 @@
 passwork @ git+https://github.com/passwork-me/passwork-python.git#egg=passwork
+keepercommander>=16.9.0

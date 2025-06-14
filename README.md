@@ -60,3 +60,29 @@ MIT – because lock-in is bad.  See `LICENSE`.
 
 I wrote this because the official exporter didn’t cut it.  If you find issues,
 open one.  If you break your vault, that’s on you.
+
+
+## Import into Keeper
+
+1. **Generate Keeper‑formatted file**
+
+   ```bash
+   python convert-to-keeper-json.py        # creates keeper-import.json
+   ```
+
+2. **Bring it into your vault**
+
+   * **Web Vault / Desktop**  
+     *Settings ➜ Import ➜ Keeper JSON ➜* select `keeper-import.json`.
+
+   * **Commander CLI**  
+     ```bash
+     pip install keepercommander
+     keeper login you@company.com  # or SSO connect
+     keeper import --format=json keeper-import.json
+     ```
+
+   The folder structure (`Vault\Subfolder\…`) is rebuilt automatically.  
+   Attachments are already inlined; no extra upload step is required.
+
+---
