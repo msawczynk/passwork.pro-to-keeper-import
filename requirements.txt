@@ -1,0 +1,1 @@
+passwork @ git+https://github.com/passwork-me/passwork-python.git#egg=passwork
